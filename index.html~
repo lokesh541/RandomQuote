@@ -19,11 +19,38 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1556852797958367',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+document.getElementById('publishBtn').onclick = function() {
+  FB.api('/me/feed', 'post', {message: 'Hello, world!'}, function(response) {
+    Log.info('API response', response);
+    document.getElementById('publishBtn').innerHTML = 'API response is ' + response.id;
+  });
+  return false;
+}  
+</script>
+
   </head>
   <body>
     <div class="container animated bounceInUp ">
   <div class="row text-center">
     <h1 class="white"> Random Quote Generator</h1>
+   <div class="fb-login-button" data-scope="publish_actions" data-max-rows="1" data-size="medium"></div>
+      <div id="publishBtn" style="padding-top: 20px">Click me to publish a "Hello, World!" post to Facebook.</div>
     <div class="text-center">
       <button class="btn btn-danger new">Inspire me</button>
     </div>
