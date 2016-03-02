@@ -1,40 +1,34 @@
+
 $(document).ready(function() {
   var index,index_co,newQuote;
   $(".new").click(newQuote=function() {
    const val = quotes.length;
    index = Math.random() * val|0;
-
+    
     $(".quote").hide()
     $("body").removeClass(background[index_co])
-   index_co = (Math.random() * 11)|0;
+   index_co = (Math.random() * 11)|0;  
     $(".quote").text(quotes[index])//+' '+index+' '+index_co)
     $(".container").css("color", colors[index_co])
     $("body").addClass(background[index_co])
-    $(".quote").show(700)
+    $(".quote").show(700)   
   });
   $(".quote").addClass("animated bounceInLeft")
 
   newQuote();
-
-  $("#twitter").click(function() {
+  
+  $(".btn-primary").click(function() {
   var tweet = quotes[index]; // $(".quote").text()
-
+    
      sendTweet(tweet);
+   
   });
-
 
   function sendTweet(tweet) {
     window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweet), "_blank")
   }
+  
 
-
-
-    $('#fb-btn').click(function() {
-      var status = quotes[index];
-    FB.api('/me/feed', 'post', {message: status}, function(response) {
-      Log.info('API response', response);
-      return false;
-    });
 });
 
 var quotes = [
@@ -145,15 +139,15 @@ var colors = [
 ]
 var background = [
   "bg-grey",
-  "bg-navy ", //   #001F3F
-  "bg-blue ", //   #0074D9
-  "bg-aqua ", //   #7FDBFF
-  "bg-teal ", //   #39CCCC
-  "bg-olive ", //   #3D9970
-  "bg-green ", //   #2ECC40
-  "bg-lime ", //   #01FF70
-  "bg-yellow ", //   #FFDC00
-  "bg-orange ", //   #FF851B
-  "bg-silver ", //   #DDDDDD
-  "bg-black ", //   #111111
+  "bg-navy ", //   #001F3F      
+  "bg-blue ", //   #0074D9      
+  "bg-aqua ", //   #7FDBFF      
+  "bg-teal ", //   #39CCCC      
+  "bg-olive ", //   #3D9970      
+  "bg-green ", //   #2ECC40      
+  "bg-lime ", //   #01FF70      
+  "bg-yellow ", //   #FFDC00      
+  "bg-orange ", //   #FF851B             
+  "bg-silver ", //   #DDDDDD      
+  "bg-black ", //   #111111      
 ]
