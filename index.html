@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+ <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+ <link rel="stylesheet" href="css/colors.css" media="screen" title="no title" charset="utf-8">
+ <link rel="stylesheet" href="css/animate.css" media="screen" title="no title" charset="utf-8">
+ <script type="text/javascript">
+ window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1556852797958367',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container animated bounceInUp ">
+  <div class="row text-center">
+    <h1 class="white"> Random Quote Generator</h1>
+    <div class="text-center">
+      <button class="btn btn-danger new">Inspire me</button>
+    </div>
+
+
+    <p class="quote wordwrap">
+      “Don't cry because it's over, smile because it happened.” ― Dr. Seuss
+    </p>
+    <div class="text-center">
+      <button class="btn btn-primary" id="twitter"><span><i class = "fa fa-twitter"></i>Tweet</span></button>
+      <button class="btn btn-primary" id="fb-post" data-scope="publish_actions" data-max-rows="1" data-size="medium" ><span><i class="fa fa-facebook"></i>Post</span></button>
+    </div>
+
+
+
+
+  </div>
+
+
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+
+  </body>
+</html>
